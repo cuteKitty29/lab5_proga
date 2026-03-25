@@ -6,6 +6,7 @@ import java.util.Objects;
 
 
 public class Dragon {
+    public static Integer nextID = Integer(0); 
     private Integer id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Coordinates coordinates; //Поле не может быть null
@@ -28,7 +29,7 @@ public class Dragon {
                   DragonType type,
                   DragonCharacter character,
                   DragonHead head) {
-        setId(id);
+        id = Dragon.nextID++;
         setName(name);
         setCoordinates(coordinates);
         setCreationDate(creationDate);
@@ -43,12 +44,6 @@ public class Dragon {
         return id;
     }
 
-    public void setId(Integer id) {
-        if (id == null || id <= 0) {
-            throw new IllegalArgumentException("Поле id должно быть больше 0 и не может быть null.");
-        }
-        this.id = id;
-    }
 
     public String getName() {
         return name;
