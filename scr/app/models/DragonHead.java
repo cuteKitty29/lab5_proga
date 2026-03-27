@@ -49,7 +49,7 @@ public class DragonHead implements Comparable<DragonHead> {
 
     @Override
     public boolean equals(Object o) {
-        if (o.instanceof DragonHead){
+        if (o instanceof DragonHead){
             DragonHead that = (DragonHead) o;
             return (this.size == that.getSize() && this.toothCount == that.getToothCount());
         }
