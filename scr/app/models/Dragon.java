@@ -45,6 +45,9 @@ public class Dragon implements Comparable<Dragon> {
    public Dragon(){
     
    }
+   public void setId(int cId){
+        this.id = Integer.valueOf(cId);
+   }
 
     public Integer getId() {
         return id;
