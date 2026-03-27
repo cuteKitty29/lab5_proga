@@ -4,11 +4,11 @@ import java.util.Scanner;
 import java.util.Arrays;
 import commands.*;
 
+
 public class Invoker{
 
     Map<String, Command> mapCommands = new HashMap<>();
 
-    
 
     mapCommands.put("help", new HelpCommand());
     mapCommands.put("add", new AddCommand());
