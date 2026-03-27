@@ -6,8 +6,9 @@ import java.util.Objects;
 
 
 
+
 public class Dragon implements Comparable<Dragon> {
-    public static Integer nextID = Integer(0); 
+    public static Integer nextID = Integer.valueOf(0); 
     private Integer id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой
     private Coordinates coordinates; //Поле не может быть null
@@ -21,7 +22,7 @@ public class Dragon implements Comparable<Dragon> {
     /**
      * Полный конструктор.
      */
-    /*public Dragon(Integer id,
+    public Dragon(Integer id,
                   String name,
                   Coordinates coordinates,
                   Date creationDate,
@@ -39,10 +40,10 @@ public class Dragon implements Comparable<Dragon> {
         setType(type);
         setCharacter(character);
         setHead(head);
-    }*/
+    }
 
    public Dragon(){
-    id = Dragon.nextID++;
+    
    }
 
     public Integer getId() {
@@ -122,7 +123,15 @@ public class Dragon implements Comparable<Dragon> {
 
     @Override
     public int compareTo(Dragon other) {
-        return(this.id - other.getId());      
+        if (this.age != other.getAge()){
+            return (int) (this.age - other.getAge());
+        }
+        else if(this.name != other.getName()){
+            return Integer.valueOf(this.name) - Integer.valueOf(other.getName());
+        }
+        else{
+            return this.id - other.getId();
+        }
     }
 
     @Override
@@ -147,8 +156,12 @@ public class Dragon implements Comparable<Dragon> {
     }
 
     @Override
-    public boolean equals(Dragon other){
-        return this.id == other.getId();
+    public boolean equals(Object o){
+        if (o instanceof Dragon){
+            Dragon that = (Dragon) o;
+            return (this.id == that.getId() && this.age == that.getAge() && this.name == that.getName());
+        }
+        return false;
     }
 }
 

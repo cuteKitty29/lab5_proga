@@ -46,10 +46,11 @@ public class Coordinates {
 
     @Override
     public boolean equals(Object o) {
-        if (o.instanceof Coordinates){
+        if (o instanceof Coordinates ){
             Coordinates that = (Coordinates) o;
             return (this.x == that.getX() && this.y == that.getY());
         }
+        return false;
     }
 
     @Override

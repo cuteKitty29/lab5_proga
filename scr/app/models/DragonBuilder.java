@@ -1,9 +1,12 @@
 package models;
 
-public class implements DragonBuilder{
+import java.util.Date;
+
+public class DragonBuilder {
+    private Dragon thisDragon;
 
     public DragonBuilder(){
-        Dragon thisDragon = new Dragon();
+        thisDragon = new Dragon();
     }
 
     public DragonBuilder setName(String name){
