@@ -1,3 +1,5 @@
+package commands;
+
 public class HeadCommand implements Command{
 
     @Override

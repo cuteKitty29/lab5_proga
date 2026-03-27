@@ -1,3 +1,4 @@
+package models;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
@@ -5,7 +6,7 @@ import java.util.Objects;
 
 
 
-public class Dragon {
+public class Dragon implements Comparable<Dragon> {
     public static Integer nextID = Integer(0); 
     private Integer id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
     private String name; //Поле не может быть null, Строка не может быть пустой

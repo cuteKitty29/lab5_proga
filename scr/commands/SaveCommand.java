@@ -1,3 +1,5 @@
+package commands;
+
 public class SaveCommand implements Command{
 
     @Override

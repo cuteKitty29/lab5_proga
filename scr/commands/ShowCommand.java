@@ -1,3 +1,5 @@
+package commands;
+
 public class ShowCommand implements Command{
 
     @Override 

@@ -1,3 +1,5 @@
+package commands;
+
 public class SomeofAgeCommand implements Command{
 
     @Override

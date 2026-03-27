@@ -1,3 +1,5 @@
+package commands;
+
 public class RemoveCommand implements Command{
 
     @Override

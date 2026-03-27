@@ -1,8 +1,8 @@
+package commands;
+
 public class AddCommand implements Command{
     CollectionManager cm;
-    public void execute(Object ob){
-        cm.add(ob);    //i don't know how i shoud get the object, which must be added
-    }
+
 
     @Override
     public String name(){
@@ -11,8 +11,9 @@ public class AddCommand implements Command{
     }
 
     @Override
-    public void execute(String argument){    //it is a temporary solution
-        
+    public void execute(String[] argument){    //it is a temporary solution
+        //создание объекта
+        //добавление объекта в коллекцию
     }
 
     @Override
