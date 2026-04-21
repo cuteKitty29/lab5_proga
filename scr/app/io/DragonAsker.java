@@ -1,5 +1,5 @@
 import models.*;
-import util.ValidationException;
+import util.*;
 
 public class DragonAsker {
 
@@ -7,8 +7,8 @@ public class DragonAsker {
     private ConsoleInputHadler consoleInput;
 
     public DragonAsker(){
-        Console MyConsole = new Console();
-        ConsoleInputHadler consoleInput = new ConsoleInputHadler();
+        MyConsole = new Console();
+        consoleInput = new ConsoleInputHadler();
     }
 
 
@@ -95,5 +95,45 @@ public class DragonAsker {
             MyConsole.println(e.getMessage());
             return null;
         }
+    }
+
+    public DragonCharacter askCharacter(){
+        MyConsole.println("Input a character: CUNNING, EVIL, GOOD, CHAOTIC;");
+        String inputString = consoleInput.readLine().strip();
+        if (inputString == ""){
+            return null;
+        }
+        inputString.toUpperCase();
+        try{
+            return DragonCharacter.valueOf(inputString);
+        }
+        catch (Exception e){
+            MyConsole.println(e.getMessage());
+            return null;
+        }
+    }
+
+    public DragonHead aksHead() throws IllegalArgumentException{
+        Float size;
+        int countTooth;
+        MyConsole.println("input a size of head (Float type)");
+        String inputString = consoleInput.readLine().strip();
+        if (inputString == ""){
+            throw new IllegalArgumentException("size can not be null");
+        }
+        else{
+            size = Float.valueOf(inputString);
+        }
+        MyConsole.println("input a number of tooth");
+        inputString = consoleInput.readLine().strip();
+        if (inputString == ""){
+            countTooth = 0;
+        }
+        else{
+            countTooth = Integer.valueOf(inputString);
+        }
+        DragonHead head = new DragonHead(size, countTooth);
+        return head;
+
     }
 }
