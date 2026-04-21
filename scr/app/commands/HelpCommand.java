@@ -8,7 +8,7 @@ public class HelpCommand implements Command{
     }
 
     @Override
-    public Stirng description(){
+    public String description(){
         return "Help - помощь";
     }
 }

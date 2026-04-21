@@ -3,13 +3,10 @@ package commands;
 public class ClearCommand implements Command{
 
     @Override
-    public void execute(String[] argument){
+    public void execute(){
     }
 
-    @Override
-    public String name(){
-        return  "clear";
-    }
+    
 
     @Override
     public String description(){

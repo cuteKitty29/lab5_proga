@@ -3,13 +3,10 @@ package commands;
 public class InfoCommand implements Command{
 
     @Override
-    public void execute(String[] argument){
+    public void execute(){
     }
 
-    @Override
-    public String name(){
-        return "info";
-    }
+ 
     @Override 
     public String description(){
         return "Info about collection";
