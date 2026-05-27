@@ -1,0 +1,18 @@
+info
+show
+count_greater_than_age 150
+add
+ScriptDragon
+15.0
+kjhgf
+75
+WHITE
+WATER
+CHAOTIC
+6.5
+28
+info
+head
+print_field_descending_head
+execute_script script.txt
+execute_script example-script.txt
